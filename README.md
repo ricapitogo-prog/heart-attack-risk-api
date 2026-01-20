@@ -2,9 +2,6 @@
 
 A production-ready machine learning system that predicts heart attack risk based on clinical parameters.
 
-## Project Status
-✅ **Days 5-6 Complete** - Comprehensive testing with 85% coverage
-
 ## Features
 
 - **Machine Learning Model**: RandomForest classifier with 93.94% recall
