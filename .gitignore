@@ -37,3 +37,8 @@ Thumbs.db
 
 # Keep directory structure but ignore contents
 !.gitkeep
+
+# Test coverage reports
+htmlcov/
+.coverage
+.pytest_cache/
