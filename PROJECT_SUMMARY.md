@@ -312,7 +312,7 @@ Response:
 
 ## Repository
 
-GitHub: [Repository URL - to be added after push]
+GitHub: [[Repository URL - to be added after push]](https://github.com/ricapitogo-prog/heart-attack-risk-api.git)
 
 ## Contact
 
