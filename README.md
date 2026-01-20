@@ -3,7 +3,7 @@
 A production-ready machine learning system that predicts heart attack risk based on clinical parameters.
 
 ## Project Status
-🎉 **Days 3-4 Complete** - Flask API deployed and tested
+✅ **Days 5-6 Complete** - Comprehensive testing with 85% coverage
 
 ## Features
 
@@ -11,6 +11,7 @@ A production-ready machine learning system that predicts heart attack risk based
 - **REST API**: Flask-based API for serving predictions
 - **Input Validation**: Pydantic schemas ensure data quality
 - **Error Handling**: Comprehensive validation and error messages
+- **Testing**: 22 unit and integration tests with 85% coverage
 - **Production Ready**: Model serialization, health checks, logging
 
 ## Quick Start
@@ -34,12 +35,17 @@ pip install -r requirements.txt
 python3 train_model.py
 ```
 
-### 3. Start API
+### 3. Run Tests
+```bash
+pytest tests/ -v --cov=src
+```
+
+### 4. Start API
 ```bash
 python3 src/api.py
 ```
 
-### 4. Make Predictions
+### 5. Make Predictions
 ```bash
 curl -X POST http://localhost:5001/predict \
   -H "Content-Type: application/json" \
@@ -55,11 +61,16 @@ heart_attack_risk_api/
 │   ├── scaler.pkl
 │   └── model_metadata.json
 ├── src/                     # Source code
+│   ├── __init__.py
 │   ├── data_validator.py   # Pydantic schemas
 │   ├── model_loader.py     # Model loading
 │   ├── predictor.py        # Prediction logic
 │   └── api.py              # Flask API
-├── tests/                   # Unit tests
+├── tests/                   # Unit tests (85% coverage)
+│   ├── conftest.py
+│   ├── test_data_validator.py
+│   ├── test_predictor.py
+│   └── test_api.py
 ├── train_model.py           # Model training script
 ├── test_model_loading.py   # Model testing script
 └── requirements.txt         # Dependencies
@@ -84,15 +95,31 @@ See [API_DOCUMENTATION.md](API_DOCUMENTATION.md) for detailed API docs.
 
 See [MODEL_SELECTION.md](MODEL_SELECTION.md) for model comparison details.
 
+## Testing
+
+22 tests with **85% code coverage**:
+- Data validation tests: 8 tests (92% coverage)
+- Predictor tests: 6 tests (91% coverage)
+- API integration tests: 7 tests (88% coverage)
+
+See [TESTING.md](TESTING.md) for detailed testing documentation.
+
 ## Development Timeline
 
 -  **Days 1-2**: Model training and serialization
 -  **Days 3-4**: API development and testing
--  **Days 5-6**: Testing and monitoring (Next)
--  **Day 7**: Documentation and deployment prep
+-  **Days 5-6**: Comprehensive testing suite
+-  **Day 7**: Documentation and deployment prep (Next)
+
+## Documentation
+
+- [API_DOCUMENTATION.md](API_DOCUMENTATION.md) - API endpoint details
+- [MODEL_SELECTION.md](MODEL_SELECTION.md) - Model comparison and selection
+- [TESTING.md](TESTING.md) - Testing guide and best practices
+- [SETUP.md](SETUP.md) - Detailed setup instructions
 
 ## Author
-Rica Mae Pitogo - Data Science Portfolio Project
+Rica Mae Pitogo - Master's in Data Science in Health @ UCLA
 
 ## Last Updated
 January 2026
