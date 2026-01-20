@@ -8,9 +8,9 @@ Endpoints:
 """
 
 from flask import Flask, request, jsonify
-from data_validator import PatientData, PredictionResponse
-from model_loader import ModelLoader
-from predictor import HeartAttackPredictor
+from src.data_validator import PatientData, PredictionResponse
+from src.model_loader import ModelLoader
+from src.predictor import HeartAttackPredictor
 import logging
 from pathlib import Path
 
